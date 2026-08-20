@@ -2,8 +2,9 @@ apiVersion: v1
 kind: Secret
 metadata:
   name: mysql-config
+type: Opaque
 data:
-  MYSQL_ROOT_PASSWORD: Um9ib1Nob3BAMQo=
+  MYSQL_ALLOW_EMPTY_PASSWORD: "eWVzCg=="
 ---
 
 
