@@ -38,13 +38,13 @@ spec:
         ports:
         - name: liveness-port
           containerPort: 8080
-          
         startupProbe:
           httpGet:
             path: /health
             port: liveness-port
-            failureThreshold: 12
-            periodSeconds: 10
+            # we are giving 5 minutes to start the application
+          failureThreshold: 12
+          periodSeconds: 10
         readinessProbe:
           httpGet:
             path: /health
