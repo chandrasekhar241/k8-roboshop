@@ -1,3 +1,12 @@
+apiVersion: v1
+kind: Secret
+metadata:
+  name: mysql
+data:
+  MYSQL_ROOT_PASSWORD: Um9ib1Nob3BAMQo=
+---
+
+
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -24,6 +33,11 @@ spec:
       containers:
       - name: mysql
         image: chandu4234/mysql:4.0.0
+        envFrom:
+        - secretRef:
+          name: mysql
+          
+
 
 ---
 
