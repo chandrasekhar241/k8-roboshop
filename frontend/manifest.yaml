@@ -85,7 +85,7 @@ spec:
     matchLabels:
       project: roboshop
       tier: frontend
-      component: rontend
+      component: frontend
   template:
     metadata:
       labels:
