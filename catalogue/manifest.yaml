@@ -46,6 +46,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: catalogue
+  namespace: catalogue
   labels:
       project: roboshop
       tier: backend
