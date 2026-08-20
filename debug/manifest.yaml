@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: debug
+  namespace: roboshop #pod name
+  labels:
+    project: roboshop
+    environment: dev
+    component: debug
+spec:
+  containers:
+  - name: debug # container name
+    image: chandu4234/debug:4.0.0 # by default will get from docker hub
