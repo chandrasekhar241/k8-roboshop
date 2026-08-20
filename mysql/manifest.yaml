@@ -33,7 +33,8 @@ spec:
     spec:
       containers:
       - name: mysql
-        image: chandu4234/mysql:4.0.1
+        image: chandu4234/mysql:4.0.0
+        args: ["--mysql-native-password=ON"]
         env:
         - name: MYSQL_ROOT_PASSWORD
           value: "RoboShop@1"
